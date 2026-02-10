@@ -49,24 +49,39 @@ sudo apt install pandoc
 sudo apt install lcov
 ```
 
-### Installation du script
+### Installation
 
-1. Cloner le repository
+1. Cloner ce repository
 ```bash
-https://github.com/williamWilliam10/Flutter-Audit-Tool.git
-cd flutter-audit-tool
+git clone https://github.com/williamWilliam10/Flutter-Audit-Tool.git
 ```
 
-2. Placer le fichier `audit_flutter.sh` à la racine de votre projet Flutter, au même niveau que `pubspec.yaml`
+2. Copier le fichier `audit_flutter.sh` à la racine de votre projet Flutter
+```bash
+cp Flutter-Audit-Tool/audit_flutter.sh /chemin/vers/votre/projet/
+```
+
+**Important** : Le fichier `audit_flutter.sh` doit être placé **à la racine de votre projet Flutter**, au même niveau que le fichier `pubspec.yaml`.
+
+Exemple :
+```
+votre-projet-flutter/
+├── pubspec.yaml
+├── audit_flutter.sh    ← Le script doit être ici
+├── lib/
+├── test/
+└── ...
+```
 
 3. Attribution des permissions
 ```bash
+cd /chemin/vers/votre/projet/
 chmod +x audit_flutter.sh
 ```
 
 ## 🚀 Utilisation
 
-### Lancement de l'audit
+Depuis la racine de votre projet Flutter (là où se trouve `pubspec.yaml`) :
 ```bash
 ./audit_flutter.sh
 ```
@@ -94,10 +109,11 @@ flutter test --coverage
 ## 👥 Auteur
 
 - **William Lowe** - [lowewilliam.com](https://lowewilliam.com)
- pour plus de détails.
 
 ## 📄 License
+
 Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
+
 ---
 
 ⭐️ Si cet outil vous a aidé, n'hésitez pas à lui donner une étoile !
