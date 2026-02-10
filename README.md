@@ -53,7 +53,7 @@ sudo apt install lcov
 
 1. Cloner le repository
 ```bash
-git clone https://github.com/username/flutter-audit-tool.git
+https://github.com/williamWilliam10/Flutter-Audit-Tool.git
 cd flutter-audit-tool
 ```
 
